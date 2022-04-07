@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Forms Challenge</title>
+  </head>
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+    <main>
+      <form action="/" method="get">
+        <section>
+          <h2>How can we help you?</h2>
+          <ul>
+            <li>
+              <label for="user-name-id">Your Name</label>
+              <input type="text" name="user-name" id="user-name-id" required />
+            </li>
+            <li>
+              <label for="user-email-id">Your E-Mail Address</label>
+              <input
+                type="email"
+                name="user-email"
+                id="user-email-id"
+                required
+              />
+            </li>
+            <li>
+              <label for="user-phone-id">Your Phone Number</label>
+              <input
+                type="tel"
+                name="user-phone"
+                id="user-phone-id"
+                required
+                minlength="10"
+              />
+              <!-- tel is an input type for telephone numbers. -->
+            </li>
+            <li>
+              <label for="user-message-id">Your Message</label>
+              <textarea
+                name="user-message"
+                id="user-message-id"
+                cols="30"
+                rows="10"
+                required
+                minlength="10"
+                maxlength="200"
+              ></textarea>
+            </li>
+            <li>
+              <label for="dropdown-id">How did you find us?</label>
+              <select name="dropdown" id="dropdown-id" required>
+                <option value="web">Web Search</option>
+                <option value="mouth">Word of Mouth</option>
+                <option value="other">Other</option>
+              </select>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>How should we reply?</h2>
+          <ul>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="user-radio"
+                id="call-id"
+                value="call"
+                required
+              />
+              <label for="call-id">Call me</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="user-radio"
+                id="email-id"
+                value="email"
+                required
+              />
+              <label for="email-id">Send me an email</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="user-radio"
+                id="do-not-id"
+                value="do-not"
+                required
+              />
+              <label for="do-not-id">Don't reply</label>
+            </li>
+          </ul>
+        </section>
+        <section id="terms-styling">
+          <div class="form-control-inline">
+            <input type="checkbox" id="agree-terms-id" name="terms" required />
+            <label for="agree-terms-id">Accept Terms</label>
+          </div>
+        </section>
+        <section id="buttons-section">
+          <button type="reset" id="clear-button">Clear</button>
+          <button id="submit-button">Submit</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>
